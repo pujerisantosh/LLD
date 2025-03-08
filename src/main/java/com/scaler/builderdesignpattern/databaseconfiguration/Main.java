@@ -2,18 +2,20 @@ package com.scaler.builderdesignpattern.databaseconfiguration;
 
 public class Main {
     public static void main(String[] args) {
-        // Using the builder to create a database configuration
-        DatabaseConfiguration config = DatabaseConfiguration.builder()
-                .databaseUrl("jdbc:mysql://localhost:3306/mydb")
+        DatabaseConfiguration config = new DatabaseConfiguration.Builder()
+                .url("jdbc:mysql://localhost:3306/mydb")
                 .username("admin")
-                .password("securePass")
-                .maxConnections(20)
+                .password("secret")
+                .maxConnections(10)
                 .enableCache(true)
-                .readOnly(false)
+                .isReadOnly(false)
                 .build();
 
-        // Print the configuration
-        System.out.println(config);
+        System.out.println("Database URL: " + config.getUrl());
+        System.out.println("Username: " + config.getUsername());
+        System.out.println("Max Connections: " + config.getMaxConnections());
+        System.out.println("Enable Cache: " + config.isEnableCache());
+        System.out.println("Read Only: " + config.isReadOnly());
     }
 }
 
