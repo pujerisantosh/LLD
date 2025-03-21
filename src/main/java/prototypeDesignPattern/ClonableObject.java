@@ -1,4 +1,7 @@
 package prototypeDesignPattern;
 
-public interface ClonableObject {
+public interface ClonableObject<T> {
+
+    T cloneObject();
+
 }
