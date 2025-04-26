@@ -11,7 +11,7 @@ public class DatabaseConfiguration {
     private final boolean isReadOnly;
 
     // Private constructor to enforce usage of Builder
-    private DatabaseConfiguration(Builder builder) {
+    public DatabaseConfiguration(Builder builder) {
         this.url = builder.url;
         this.username = builder.username;
         this.password = builder.password;
