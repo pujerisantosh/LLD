@@ -37,6 +37,12 @@ public class GeneratePascalsTriangle {
     }
 
     public static void main(String[] args) {
+GenerateParenthesis gn = new GenerateParenthesis();
 
+int a = 3;
+
+        System.out.println(gn.solve(a));
     }
 }
+
+
