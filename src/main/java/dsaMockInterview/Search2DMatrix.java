@@ -43,7 +43,7 @@ public class Search2DMatrix {
             {2, 5, 8, 12},
             {3, 6, 9, 16},
             {10, 13, 14, 17}};
-           int B = 25;
+           int B = 9;
 
            boolean res = m.solve(A1,B);
 
