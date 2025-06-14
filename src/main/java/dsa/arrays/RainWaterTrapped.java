@@ -2,6 +2,8 @@ package dsa.arrays;
 
 public class RainWaterTrapped {
     public static int solve(int[] a){
+
+
         int n = a.length;
         if(n<=2) return 0;
 
