@@ -2,6 +2,10 @@ package dsa.arrays;
 
 public class MaxofithRow {
     public static int solve(int[][] A,int B){
+
+
+
+
         int n = A.length;
         int m = A[0].length;
 

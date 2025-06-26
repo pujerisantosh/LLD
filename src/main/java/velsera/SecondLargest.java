@@ -11,7 +11,7 @@ if (num > max){
     second= max;
     max = num;
 }
-else if (num > second && num != max){
+else if (num < second && num != max){
 second =  num;
 }
         }
