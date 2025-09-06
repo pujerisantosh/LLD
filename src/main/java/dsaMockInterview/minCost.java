@@ -2,7 +2,12 @@ package dsaMockInterview;
 
 public class minCost {
 
+
+
     public int solve(int[][] A, int B, int C) {
+
+
+
 
         int rows = A.length;
         int cols = A[0].length;

@@ -6,6 +6,8 @@ public class GasStationProblem {
         int totalTank =0;
         int startStation =0;
 
+
+
         for (int i=0; i<gas.length;i++){
             int current = gas[i]- cost[i];
             totalGas += current;

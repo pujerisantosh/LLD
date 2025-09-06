@@ -5,45 +5,32 @@ import java.util.Scanner;
 public class MinInsertionsToBalance {
     public static int minInsertions(String s) {
 
-        int insertion = 0;
-        int open = 0;
-        int i = 0;
+        int insertion =0;
+        int rightNeeded =0;
+        int i=0;
 
-        if (i < s.length()) {
+        while (i < s.length()){
             char c = s.charAt(i);
-            if (c == '(') {
-                open++;
+            if(c == '('){
+                if ( rightNeeded % 2 != 0){
+                    insertion++;
+                    rightNeeded--;
+                }
+                rightNeeded += 2;
+                i++;
             }
-
             else {
-                if (i + 1 < s.length() && s.charAt(i + 1) == 1) {
-                    if (open > 0) {
-                        open--;
-                    } else {
-                        insertion++;
-                    }
-
-                    i += 2;
-
+                rightNeeded--;
+                if (rightNeeded < 0){
+                    insertion++;
+                    rightNeeded =1;
                 }
-
-
-
-                else {
-                    if (open > 0) {
-                        open--;
-                        insertion++;
-                    } else {
-                        insertion += 2;
-                    }
-
-                    i += 1;
-                }
+                i++;
             }
-
         }
-        insertion += open * 2;
-        return insertion;
+
+        return insertion+rightNeeded;
+
 
     }
 

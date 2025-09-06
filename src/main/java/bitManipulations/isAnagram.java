@@ -4,6 +4,9 @@ public class isAnagram {
     public static int solve(String a, String b){
         if (a.length() != b.length()) return 0;
 
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+
         int[] freq = new int[26];
 
         for (int i=0;i<a.length();i++){
