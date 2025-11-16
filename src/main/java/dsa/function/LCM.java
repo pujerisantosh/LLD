@@ -1,0 +1,31 @@
+package dsa.function;
+
+import java.util.Scanner;
+
+public class LCM {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        long a = sc.nextInt();
+        long b = sc.nextInt();
+
+
+        long gcd = findGCD(a,b);
+        long lcm = (a*b)/gcd ;
+        System.out.println(lcm);
+    }
+
+    private static int findGCD(long a, long b) {
+
+        while ( b != 0){
+            long temp = b;
+            b = a%b;
+            a = temp;
+
+
+        }
+
+        return (int) a;
+    }
+}
